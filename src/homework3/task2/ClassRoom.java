@@ -16,7 +16,8 @@ public class ClassRoom {
 
         classRoom.showClassRoom();
 
-    }public void showClassRoom() {
+    }
+    public void showClassRoom() {
         for (Pupil pupil: classRoom) {
             pupil.study();
             pupil.read();
