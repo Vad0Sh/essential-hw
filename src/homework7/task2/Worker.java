@@ -50,6 +50,7 @@ public class Worker {
                 '}';
     }
 
+
     static class ComparatorByYear implements Comparator {
         public int compare(Object o1, Object o2) {
             return ((Worker) o1).year - ((Worker) o2).year;

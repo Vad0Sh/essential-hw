@@ -5,13 +5,12 @@ import java.util.Scanner;
 
 public class Main {
     static Worker[] workers = new Worker[5];
-
     public static void main(String[] args) {
         Worker worker;
         System.out.println(Arrays.toString(workers));
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < workers.length ; i++) {
+        for (int i = 0; i < workers.length; i++) {
             worker = new Worker();
             System.out.println("Введите имя работника: ");
             worker.setName(scanner.nextLine());
@@ -31,15 +30,11 @@ public class Main {
                 worker.setYear(Integer.parseInt(scanner.nextLine()));
             }
             workers[i] = worker;
+            System.out.println(Arrays.toString(workers));
         }
-
-
-        System.out.println(Arrays.toString(workers));
-    }
-    Worker.ComparatorByYear w = new Worker.ComparatorByYear();
-
-       Arrays.sort(Worker, new ComparatorByYear());
-        for (Worker temp : c) {
-        System.out.println(temp);
+        Arrays.sort(workers, new Worker.ComparatorByYear());
+        for (Worker temp : workers) {
+            System.out.println(temp);
+        }
     }
 }
